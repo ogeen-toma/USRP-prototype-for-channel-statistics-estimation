@@ -1,1 +1,1 @@
-# USRP_Prototype_for_channel_statistics_estimation
+# USRP_prototype_for_channel_statistics_estimation
