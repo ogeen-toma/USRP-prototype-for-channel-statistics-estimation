@@ -8,5 +8,7 @@ This repository contains the following files:
 
 3)Archive.zip : source code for both TX and RX written in c language
 
-4)Readme
+4)README.md
+
+The executable GUI files (TX & RX) are designed to ease the configuration of this prototype without the need to refer to the source code. They can run on Linux distribution (e.g. Ubuntu). If you are using Windows you may run the code in the Archive.zip from terminal window.
 
