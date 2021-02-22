@@ -1,0 +1,90 @@
+#
+# Configuration parameters for PECAS_TX_RBPi
+#
+
+# Load or generate the transmitted periods
+# 0 = Load periods from TX_periods.txt (an error is produced if TX_periods.txt does not exist)
+# 1 = Generate random periods according to the selected distribution
+Load_or_Generate = 1
+
+# Save the generated periods to a file (when Load_or_Generate == 1)
+# 0 = Do not save the generated random periods
+# 1 = Save the generated periods to "TX_periods.txt" (the file will be overwritten if it already exists)
+SavePeriods = 1
+
+# Number of periods to be loaded from file/generated randomly (for each period type) [unsigned long long int]
+nofPeriods = 2
+
+# Distribution of idle (Distribution_T0) and busy (Distribution_T1) periods,
+# and values of their location (mu), scale (lambda) and shape (alpha) parameters [double]
+#
+# *** NOTE 1 *** 
+# Reference [IEEE TVT 2013 paper]:
+# M. López-Benítez, F. Casadevall, "Time-dimension models of spectrum
+# usage for the analysis, design and simulation of cognitive radio
+# networks," IEEE Transactions on Vehicular Technology, vol. 62, no. 5,
+# pp. 2091-2104, June 2013.
+# DOI: http://dx.doi.org/10.1109/TVT.2013.2238960
+# Available at: http://www.lopezbenitez.es/research-publications.html
+#
+# *** NOTE 2 ***
+# The following distributions can be selected for both idle and busy periods
+# (see IEEE TVT 2013 paper for details on the particular CDF considered for each case)
+# 0 = Test mode (generates a sequence of interleaved 1-second idle and busy periods)
+# 1 = Exponential
+# 2 = Generalised exponential
+# 3 = Pareto
+# 4 = Generalised Pareto
+# 5 = Log-normal
+# 6 = Gamma
+# 7 = Weibull
+#
+# *** NOTE 3 *** 
+# Where relevant, the reference time unit for the distribution parameters is SECONDS
+# (see IEEE TVT 2013 paper for some examples of values for the distribution parameters)
+#
+# *** NOTE 4 *** 
+# The old version of the program generated the period durations using C's delay funtion,
+# which allows a time resolution of 1 ms. This new version uses C's nanosleep function
+# instead, which provides an improved time resolution of 1 ns. However, the minimum
+# period duration that can be transmitted may be constrained by the hardware limitations
+# of the employed modulator/s (for most low-cost OOK modulators this is around 0.1-1ms).
+Distribution_T0 = 4
+mu_0            = 3.5310
+lambda_0        = 2.6272
+alpha_0         = 0.2119
+Distribution_T1 = 4
+mu_1            = 3.5470
+lambda_1        = 10.7968
+alpha_1         = 0.1929
+
+
+# Shows in real-time the values of the transmitted busy/idle periods
+# NOTE: Printing the durations of the transmitted periods in the screen
+# will lead to some additional delay that will add up to the duration of
+# the generated periods. At short time scales this extra delay will
+# introduce noticeable inaccuracies. This option can be used for testing
+# or debugging but should be deactivated for the final experiment.
+# 0 = Does not show the transmitted busy/idle periods
+# 1 = Shows the transmitted busy/idle periods
+ShowTransmittedPeriods = 1
+
+
+# Enter the serial number of the USRP device that you want to use as a transmitter. [char]
+# NOTE: To find the serial number of a USRP device type in the terminal window $ uhd_find_devices.
+USRPdevice = 319473B 
+
+# Center frequency in Hz [double]
+# NOTE: The frequency range of the USRP B200mini is between [70 MHz - 6 GHz] 433920000
+CenterFrequency = 433.92e6
+
+# Desired DAC sample rate in Hz (number of complex I/Q samples per second) [double]
+# USRP B200mini master clock rate can be set upto 61.44 MHz. However, the analog frontend filter 
+# bandwidth is limited to 56 MHz maximum and 200 kHz minimum. Therefore, it is recommended to
+# set the sample rate between [200 kHz – 56 MHz]
+SampleRate = 56000000
+
+# Desired tuner gain in dB [double]
+# USRP B200mini transmit frontend gain have upto 89.8 dB of available gain.
+TunerGain = 40
+
