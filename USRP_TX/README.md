@@ -11,9 +11,9 @@
 
 3) Finally, run the transmitter program either from GUI or from terminal window:
 
-a) GUI:
+  a) GUI:
 
-b) Terminal window
+  b) Terminal window
 
 5) Then copy config.txt file into build folder, also can be done from terminal window as:
 
