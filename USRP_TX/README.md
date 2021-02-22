@@ -20,4 +20,3 @@ This configuration can be modified from config.txt file, where detailed descript
 5) Finally use the following command to run the transmitter program:
 
 .../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
-
