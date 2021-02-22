@@ -1,5 +1,5 @@
 1) Download all the files in this folder into your machine in a similar folder called USRP_TX. 
-2) Open terminal window on your current directory, which is USRP_TX folder (i.e., .../USRP_TX$).
+2) Open terminal window on your current directory, which should shows .../USRP_TX$.
 3) Type the following commands to build the transmitter program:
 
 .../USRP_TX$ mkdir build
@@ -20,7 +20,4 @@ This configuration can be modified from config.txt file, where detailed descript
 5) Finally use the following command to run the transmitter program:
 
 .../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
-
-
-
 
