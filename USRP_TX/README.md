@@ -12,7 +12,6 @@
 3) Finally, run the transmitter program either from GUI or from terminal window:
 
      a) GUI:
-  
 
      b) Terminal window
 
