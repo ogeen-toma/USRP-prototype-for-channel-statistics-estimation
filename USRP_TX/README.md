@@ -11,8 +11,6 @@
 
 3) Finally, run the transmitter program either from GUI or from terminal window:
 
-a) GUI:
-
 5) Then copy config.txt file into build folder, also can be done from terminal window as:
 
 .../USRP_TX/build$ cp ../config.txt ../build/
