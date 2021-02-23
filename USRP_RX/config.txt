@@ -1,0 +1,96 @@
+#
+# Configuration parameters for USRP_RX
+#
+
+# Total reception time (in seconds) [double]
+ReceptionTime = 10.0
+
+# Time (in seconds) elapsed between consecutive sensing events (i.e., sensing period) [double]
+Ts = 0.200
+
+# Time (in seconds) spent sensing the channel (i.e., capturing signal samples) [double]
+# Typically tau = 0.1*Ts or similar.
+tau = 0.0001
+
+# Value of the decision threshold for energy detection [double]
+# To set the value of this parameter, first set the configuration parameters as desired.
+# Then run the program for a sufficiently long period of time without any signal present
+# (i.e., the transmitter should be off). The captured samples will be noise. Such samples
+# can be processed to determine the decision threshold (for example, for PFA 1%, etc.).
+# Notice that changing some configuration parameters may result in a change of the
+# observed noise statistics. Therefore, every time the configuration parameters are
+# changed, this process should be repeated to find the new decision threshold.
+# See parameter DisplayEnergyStats for more details on how to set the threshold.
+# NOTE: A value of -1 indicates that the threshold has not been set yet. The program
+# can operate with this value. Any other negative value will produce an error.
+DecisionThreshold = 0.05
+
+# The test mode displays a figure with the instantaneous received energy
+# This is useful to see the typical energy levels received for a particular
+# configuration and find a suitable value for the decision threshold.
+# NOTE: This will slow down the receiver and may prevent real-time operation,
+# therefore this should be disabled when the actual experiment takes place.
+# NOTE: Gnuplot needs to be installed in the computer to show the figure.
+# NOTE: Gnuplot5 will show some error messages. Only Gnuplot is needed.
+# 0 = Test mode is OFF
+# 1 = Test mode is ON
+TestMode = 1
+
+# Displays statistics of the sensed energy values
+# This can be useful to set the decision threshold. To this end, the program
+# should be run without any signal present (the transmitter should be off).
+# The measured energy values will correspond to noise only and the statistics
+# displayed can be used to select the decision threshold. For example, for a
+# perfect sensing without false alarms, the threshold can be set well above
+# the maximum (noise) energy value displayed. The program also displays the
+# values for the decision threshold that provide a probability of false alarm
+# (PFA) of 1% (99% percentile), 5% (95% percentile) and 10% (90% percentile)
+# (such values are valid when only noise is present, without signals).
+# Other more complex strategies can be applied by processing the measured
+# energy levels, which can be saved for offline post-processing (see below).
+# 0 = Energy statistics are not displayed
+# 1 = Energy statistics are displayed
+DisplayEnergyStats = 1
+
+# Saves the captured energy values to a file (energy_values.txt)
+# NOTE: If the file exists, it will be overwritten.
+# 0 = Does not save the measured energy values
+# 1 = Saves the measured energy values to energy_values.txt
+SaveEnergyValues = 1
+
+# Shows in real-time the values of the detected busy/idle periods
+# NOTE: Printing the durations of the detected periods in the screen
+# will lead to some additional delay that will affect the ability of
+# the receiver to operate in real-time. This option can be used for
+# testing or debugging but should be deactivated for the final experiment.
+# 0 = Does not show the detected busy/idle periods
+# 1 = Shows the detected busy/idle periods
+ShowDetectedPeriods = 1
+
+# Center frequency in Hz [double]
+# NOTE: The frequency range of the USRP B200mini is between [70 MHz - 6 GHz]
+CenterFrequency = 433.93e6
+
+# The analog frontend filter bandwidth in Hz [double]
+# NOTE: The ISM radio band of 433.92MHz center frequency has 1.74 MHz bandwidth (433.05-434.79)MHz.
+# Therefore, it is important to set the USRP frontend filter bandwidth to 1.74 MHz to avoid 
+# detecting undesired (out-of-band) signals from the neighbouring bands whilst letting through the
+# cleanest possible desired signal.
+Bandwidth = 1.74e6
+
+# Desired ADC sample rate in Hz (number of complex I/Q samples per second) [double]
+# USRP B200mini master clock rate can be set upto 61.44 MHz. However, the analog frontend filter 
+# bandwidth is limited to 56 MHz maximum and 200 kHz minimum. Therefore, it is recommended to
+# set the sample rate between [200 kHz – 56 MHz]
+SampleRate = 56000000
+
+
+# Desired tuner gain in dB [double]
+# Applies when EnableTunerAGC = 0
+# USRP B200mini receive frontend gain has upto 89.8 dB of available gain.
+TunerGain = 30
+
+# Enter the serial number of the USRP device that you want to use as a receiver. [char]
+# NOTE: To find the serial number of a USRP device use ($ uhd_find_devices) in the terminal window.
+USRPdevice = 319474A 
+
