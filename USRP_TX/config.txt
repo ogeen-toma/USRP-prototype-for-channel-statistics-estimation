@@ -64,7 +64,7 @@ ShowTransmittedPeriods = 1
 
 
 # Enter the serial number of the USRP device that you want to use as a transmitter. [char]
-# NOTE: To find the serial number of a USRP device type in the terminal window $ uhd_find_devices.
+# NOTE: To find the serial number of a USRP device use ($ uhd_find_devices) in the terminal window.
 USRPdevice = 319473B 
 
 # Center frequency in Hz [double]
@@ -78,6 +78,6 @@ CenterFrequency = 433.92e6
 SampleRate = 56000000
 
 # Desired tuner gain in dB [double]
-# USRP B200mini transmit frontend gain have upto 89.8 dB of available gain.
+# USRP B200mini transmit frontend gain has upto 89.8 dB of available gain.
 TunerGain = 40
 
