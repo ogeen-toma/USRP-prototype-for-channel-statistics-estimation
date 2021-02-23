@@ -16,14 +16,14 @@
      
      b) Terminal window: transmitter program can also be run manually from terminal window as follows:
      
-     First, copy config.txt file into build folder or by using this command:
+     First, copy config.txt file into build folder or by using the following command in terminal window:
      
         .../USRP_TX/build$ cp ../config.txt ../build/
      
-     Note: config.txt file is used by the source code USRP_TX.c to configure the USRP as a PU, which generates a traffic activity in a frequency channel. This configuration can be modified from config.txt file, where detailed description for each parameter is provided.
+     Note: config.txt file is used by the source code USRP_TX.c to configure the USRP as a PU, which generates a traffic activity in a frequency channel. This configuration can be modified manually from config.txt file, where detailed description for each parameter is provided.
 
-     Second, use the following command to run the transmitter program:
+     Finally, use the following command to run the transmitter program:
 
-     .../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
+        .../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
 
 
