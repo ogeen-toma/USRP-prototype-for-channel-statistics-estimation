@@ -42,13 +42,6 @@ nofPeriods = 2
 # *** NOTE 3 *** 
 # Where relevant, the reference time unit for the distribution parameters is SECONDS
 # (see IEEE TVT 2013 paper for some examples of values for the distribution parameters)
-#
-# *** NOTE 4 *** 
-# The old version of the program generated the period durations using C's delay funtion,
-# which allows a time resolution of 1 ms. This new version uses C's nanosleep function
-# instead, which provides an improved time resolution of 1 ns. However, the minimum
-# period duration that can be transmitted may be constrained by the hardware limitations
-# of the employed modulator/s (for most low-cost OOK modulators this is around 0.1-1ms).
 Distribution_T0 = 4
 mu_0            = 3.5310
 lambda_0        = 2.6272
