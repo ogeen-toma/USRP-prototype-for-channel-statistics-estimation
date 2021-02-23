@@ -16,9 +16,9 @@
 
      b) Terminal window: to run the the transmitter program manually from terminal window. First, copy config.txt file into build folder or by using this command:
      
-.../USRP_TX/build$ cp ../config.txt ../build/
+     .../USRP_TX/build$ cp ../config.txt ../build/
 
-Second, use the following command to run the transmitter program:
+     Second, use the following command to run the transmitter program:
 
-.../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
+     .../USRP_TX/build$ sudo chrt --rr 99 ./USRP_TX config.txt
 
