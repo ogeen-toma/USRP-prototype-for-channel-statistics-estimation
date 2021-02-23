@@ -1,4 +1,4 @@
-1) Once USRP_RX folder is downloaded open terminal window on this directory, which should show something like .../USRP_RX$.
+1) Once USRP_RX folder is downloaded open the terminal window on this directory, which should show something like .../USRP_RX$.
 2) Type the following commands to build the receiver program:
 
         .../USRP_RX$ mkdir build
