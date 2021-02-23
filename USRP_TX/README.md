@@ -12,7 +12,7 @@
 3) Finally, run the transmitter program either from GUI or terminal window:
 
      a) GUI: simply open the executable file TX in the main directory and change the configurations therein as desired and then start transmitting.
-     Note: if TX could not display, make sure TX is given execution permission from its properties.
+     Note: if TX could not display, make sure it is given execution permission from its properties.
      
      b) Terminal window: transmitter program can also be run manually from terminal window as follows:
      
