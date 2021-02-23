@@ -1,5 +1,5 @@
 #
-# Configuration parameters for PECAS_TX_RBPi
+# Configuration parameters for USRP_TX
 #
 
 # Load or generate the transmitted periods
@@ -75,7 +75,7 @@ ShowTransmittedPeriods = 1
 USRPdevice = 319473B 
 
 # Center frequency in Hz [double]
-# NOTE: The frequency range of the USRP B200mini is between [70 MHz - 6 GHz] 433920000
+# NOTE: The frequency range of the USRP B200mini is between [70 MHz - 6 GHz]
 CenterFrequency = 433.92e6
 
 # Desired DAC sample rate in Hz (number of complex I/Q samples per second) [double]
