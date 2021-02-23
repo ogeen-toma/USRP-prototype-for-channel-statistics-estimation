@@ -1,4 +1,4 @@
-1) Once this folder is downloaded open terminal window on this directory, which should show something like .../USRP_TX$.
+1) Once USRP_TX folder is downloaded open terminal window on this directory, which should show something like .../USRP_TX$.
 2) Type the following commands to build the transmitter program:
 
 .../USRP_TX$ mkdir build
