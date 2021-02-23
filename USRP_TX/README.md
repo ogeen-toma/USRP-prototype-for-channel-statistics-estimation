@@ -9,7 +9,7 @@
 
 .../USRP_TX/build$ make
 
-3) Finally, run the transmitter program either from GUI or from terminal window:
+3) Finally, run the transmitter program either from GUI or terminal window:
 
      a) GUI: simply open the executable file TX in the main directory and change the configurations as desired and then start transmitting.
      (Note: make sure the TX file is given the permission of execution from its properties)
