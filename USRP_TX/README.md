@@ -12,13 +12,15 @@
 3) Finally, run the transmitter program either from GUI or terminal window:
 
      a) GUI: simply open the executable file TX in the main directory and change the configurations therein as desired and then start transmitting.
-     (Note: make sure the TX file is given execution permission from its properties).
-
-     b) Terminal window: to run the the transmitter program manually from terminal window. First, copy config.txt file into build folder or by using this command:
+     Note: make sure the TX file is given execution permission from its properties.
      
-     .../USRP_TX/build$ cp ../config.txt ../build/
+     b) Terminal window: transmitter program can also be run manually from terminal window as follows:
      
-     (Note: config.txt file is used by the source code USRP_TX.c to configure the USRP as a PU, which generates a traffic activity in a frequency channel. This configuration can be modified from config.txt file, where detailed description for each parameter is provided).
+     First, copy config.txt file into build folder or by using this command:
+     
+        .../USRP_TX/build$ cp ../config.txt ../build/
+     
+        Note: config.txt file is used by the source code USRP_TX.c to configure the USRP as a PU, which generates a traffic activity in a frequency channel. This configuration can be modified from config.txt file, where detailed description for each parameter is provided.
 
      Second, use the following command to run the transmitter program:
 
