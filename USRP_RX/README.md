@@ -20,7 +20,7 @@
      
         .../USRP_RX/build$ cp ../config.txt ../build/
      
-     Note: config.txt file is used by the source code USRP_RX.c to configure the USRP as a SU, which performs spectrum sensing in a frequency channel. This configuration can be modified manually from config.txt file, where detailed description for each parameter is provided.
+     Note: config.txt file is used by the source code USRP_RX.c to configure the USRP as a SU, which performs spectrum sensing in a frequency channel. The settings of the SU can be configured manually from config.txt file, where detailed description for each parameter is provided.
 
      Finally, use the following command to run the receiver program:
 
