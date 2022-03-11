@@ -10,5 +10,7 @@ This repository contains the following:
 
 The executable GUI files (TX & RX) are designed to ease the configuration of this prototype without the need to refer to the source code. They can run on Linux distribution (e.g. Ubuntu) after building the transmitter and receiver programs as explained inside USRP_TX and USRP_RX folders. If you are using a different operating system (e.g., Windows or Mac), you may run the code from the terminal window, which is also explained inside USRP_TX and USRP_RX folders.
 
-The link of the research paper regarding this project will be added once the paper is accepted, which hopefully will provide a better understanding about the functionality and the benefit of this prototype.
+The link of the research paper regarding this project can be found in https://ieeexplore.ieee.org/document/9562224
+which provide a better understanding about the functionality and the benefit of this prototype.
+
 
