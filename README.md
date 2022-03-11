@@ -13,4 +13,5 @@ The executable GUI files (TX & RX) are designed to ease the configuration of thi
 The link of the research paper regarding this project can be found in https://ieeexplore.ieee.org/document/9562224
 which provide a better understanding about the functionality and the benefit of this prototype.
 
+If you in any way use this code for research that results in publications, please cite our original article in the link above.
 
